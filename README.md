@@ -1,29 +1,23 @@
 # Non-Comparison Sorting Algorithms
+## CS250: Data Structures and Algorithms - Assignment 3
+## Fall 2025 | BSDS-2
 
-**CS250: Data Structures and Algorithms - Assignment 3**  
-**Fall 2025 | BSDS-2**
-
-## 👥 Team Members
+## Team Members
 - Hamna Shah (507662)
 - Zayna Qasim (XXXX)
 
----
-
-## 📋 Project Overview
-
+## Project Overview
 This project implements and analyzes five non-comparison sorting algorithms:
 
-1. **Counting Sort (Non-Stable)** - Fast integer sorting without stability guarantees
-2. **Counting Sort (Stable)** - Preserves relative order of equal elements
-3. **LSD Radix Sort** - Processes digits from least to most significant
-4. **Bucket Sort** - Distributes elements across buckets for sorting
-5. **MSD Radix Sort** - Top-down recursive digit processing
+- **Counting Sort (Non-Stable)** - Fast integer sorting without stability guarantees
+- **Counting Sort (Stable)** - Preserves relative order of equal elements
+- **LSD Radix Sort** - Processes digits from least to most significant
+- **Bucket Sort** - Distributes elements across buckets for sorting
+- **MSD Radix Sort** - Top-down recursive digit processing
 
 The implementation includes comprehensive performance benchmarks across various input sizes, data distributions, and value ranges.
 
----
-
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - C++ compiler with C++17 support (g++ 7.0+ or clang++ 5.0+)
@@ -56,10 +50,7 @@ g++ -o sorting main.cpp -std=c++17 -g
 ./sorting
 ```
 
----
-
-## 📁 Repository Structure
-
+## Repository Structure
 ```
 cs250-noncomparison-sorting/
 │
@@ -74,9 +65,7 @@ cs250-noncomparison-sorting/
     └── range_test.txt
 ```
 
----
-
-## 🔧 Compilation Options
+## Compilation Options
 
 ### Standard Compilation
 ```bash
@@ -98,35 +87,30 @@ g++ -o sorting main.cpp -std=c++17 -O2 -Wall -Wextra
 g++ -o sorting main.cpp -std=c++17 -O3 -march=native
 ```
 
----
-
-## 🧪 What the Program Does
+## What the Program Does
 
 When you run the program, it automatically:
 
-1. **Basic Functionality Test**
-   - Sorts a small sample array with each algorithm
-   - Verifies correctness of each implementation
+### 1. Basic Functionality Test
+- Sorts a small sample array with each algorithm
+- Verifies correctness of each implementation
 
-2. **Performance Benchmarks**
-   - Tests arrays of sizes: 1K, 5K, 10K, 50K, 100K
-   - Measures execution time for each algorithm
-   - Uses random data with range [0, 10×size]
+### 2. Performance Benchmarks
+- Tests arrays of sizes: 1K, 5K, 10K, 50K, 100K
+- Measures execution time for each algorithm
+- Uses random data with range [0, 10×size]
 
-3. **Distribution Tests**
-   - Tests on random, sorted, reverse, and duplicate-heavy data
-   - Shows how each algorithm handles different patterns
+### 3. Distribution Tests
+- Tests on random, sorted, reverse, and duplicate-heavy data
+- Shows how each algorithm handles different patterns
 
-4. **Range Impact Analysis**
-   - Tests Counting Sort with small, medium, and large ranges
-   - Demonstrates range sensitivity
+### 4. Range Impact Analysis
+- Tests Counting Sort with small, medium, and large ranges
+- Demonstrates range sensitivity
 
 All results are displayed in the terminal with formatted tables.
 
----
-
-## 📊 Sample Output
-
+## Sample Output
 ```
 ======================================
   Non-Comparison Sorting Algorithms  
@@ -150,9 +134,7 @@ Bucket Sort:                     1.45 ms
 MSD Radix Sort:                  1.78 ms
 ```
 
----
-
-## 🎯 Algorithm Descriptions
+## Algorithm Descriptions
 
 ### Counting Sort (Non-Stable)
 - **Time Complexity:** O(n + k)
@@ -194,19 +176,14 @@ Distributes elements into buckets and sorts each.
 
 Recursive top-down approach with early termination.
 
----
+## Key Findings
+- Counting Sort excels with small ranges (k ≈ n)
+- Stability costs ~15% performance but enables multi-pass algorithms
+- Radix Sort scales linearly with digit count
+- Bucket Sort is distribution-dependent - great for uniform data
+- MSD Radix benefits from early termination on sorted data
 
-## 📈 Key Findings
-
-1. **Counting Sort excels with small ranges** (k ≈ n)
-2. **Stability costs ~15% performance** but enables multi-pass algorithms
-3. **Radix Sort scales linearly** with digit count
-4. **Bucket Sort is distribution-dependent** - great for uniform data
-5. **MSD Radix benefits from early termination** on sorted data
-
----
-
-## 🛠️ Customizing Tests
+## Customizing Tests
 
 You can modify the test parameters in `main.cpp`:
 
@@ -226,26 +203,22 @@ vector<int> myData = {/* your values */};
 cout << "Custom test: " << benchmarkSort(lsdRadixSort, myData) << " ms" << endl;
 ```
 
----
-
-## 📖 Documentation
+## Documentation
 
 For detailed algorithm explanations, complexity analysis, and experimental results, see:
-- **[report.pdf](report.pdf)** - Complete assignment report with analysis
+- **report.pdf** - Complete assignment report with analysis
 
----
-
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Compilation Errors
 
-**Error: `'chrono' is not a member of 'std'`**
+**Error: 'chrono' is not a member of 'std'**
 ```bash
 # Use C++11 or later
 g++ -o sorting main.cpp -std=c++17
 ```
 
-**Error: `undefined reference to 'sqrt'`**
+**Error: undefined reference to 'sqrt'**
 ```bash
 # Link math library
 g++ -o sorting main.cpp -std=c++17 -lm
@@ -261,10 +234,7 @@ g++ -o sorting main.cpp -std=c++17 -lm
 - Reduce test array sizes
 - Use optimization flag: `-O2` or `-O3`
 
----
-
-## 📝 Assignment Requirements Checklist
-
+## Assignment Requirements Checklist
 - [x] Implemented Counting Sort (Stable)
 - [x] Implemented Counting Sort (Non-Stable)
 - [x] Implemented LSD Radix Sort
@@ -278,42 +248,24 @@ g++ -o sorting main.cpp -std=c++17 -lm
 - [x] Created comprehensive report
 - [x] Uploaded to GitHub
 
----
+## Resources
+- Introduction to Algorithms (CLRS)
+- C++ Reference - std::vector
+- C++ Reference - Chrono
 
-## 🔗 Resources
-
-- [Introduction to Algorithms (CLRS)](https://mitpress.mit.edu/9780262046305/)
-- [C++ Reference - std::vector](https://en.cppreference.com/w/cpp/container/vector)
-- [C++ Reference - Chrono](https://en.cppreference.com/w/cpp/chrono)
-
----
-
-## 📄 License
-
+## License
 This project is for educational purposes as part of CS250 coursework.
 
----
-
-## 🤝 Contributing
-
+## Contributing
 This is an academic assignment. Contributions are not accepted.
 
----
-
-## 📧 Contact
+## Contact
 
 For questions about this implementation:
-- Hamna Shah: [your-email]@example.com
-- Zayna Qasim: [partner-email]@example.com
 
----
+- **Hamna Shah:** hshah.bsds24seecs@seecs.edu.pk
+- **Zayna Qasim:** zqasim.bsds24seecs@seecs.edu.pk
 
 **Course:** CS250 - Data Structures and Algorithms  
-**Institution:** [Your University]  
+**Institution:** SEECS, NUST  
 **Semester:** Fall 2025
-
----
-
-### ⭐ Acknowledgments
-
-Thanks to our instructor for guidance on algorithm design and analysis techniques.
