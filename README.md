@@ -4,7 +4,7 @@
 
 ## Team Members
 - Hamna Shah (507662)
-- Zayna Qasim (XXXX)
+- Zayna Qasim (501288)
 
 ## Project Overview
 This project implements and analyzes five non-comparison sorting algorithms:
